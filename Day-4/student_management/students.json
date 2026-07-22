@@ -1,0 +1,26 @@
+[
+    {
+        "name": "Danish Ali",
+        "roll_no": "101",
+        "age": 21,
+        "course": "AI"
+    },
+    {
+        "name": "Ayesha Noor",
+        "roll_no": "102",
+        "age": 21,
+        "course": "SE"
+    },
+    {
+        "name": "Usman Tariq",
+        "roll_no": "103",
+        "age": 23,
+        "course": "CS"
+    },
+    {
+        "name": "ali",
+        "roll_no": "909",
+        "age": 22,
+        "course": "cs"
+    }
+]
