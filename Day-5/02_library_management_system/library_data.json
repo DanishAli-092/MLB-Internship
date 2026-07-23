@@ -1,0 +1,20 @@
+[
+    {
+        "book_id": "101",
+        "title": "Rich Dad Poor Dad",
+        "author": "Robert",
+        "is_borrowed": false
+    },
+    {
+        "book_id": "!02",
+        "title": "Think and grow Rich",
+        "author": "Napoleon Hill",
+        "is_borrowed": false
+    },
+    {
+        "book_id": "103",
+        "title": "You become what you think",
+        "author": "Harry",
+        "is_borrowed": true
+    }
+]

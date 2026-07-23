@@ -1,5 +1,5 @@
 
-#01 - Create a text file and write data into it then read and display it.
+#   01 - Create a text file and write data into it then read and display it.
 
 
 def write_to_file(filename, lines):
