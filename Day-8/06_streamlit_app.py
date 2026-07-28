@@ -24,7 +24,7 @@ st.caption("Day 8 Mini Project - Linear Regression with Scikit-learn")
 
 # STEP 1: Load and preprocess data
 
-df = pd.read_csv("01_student_performance.csv")
+df = pd.read_csv("Day-8/01_student_performance.csv")
 
 df["Average_Score"] = (
     df["Python"] + df["Mathematics"] + df["Statistics"] + df["Machine_Learning"]
