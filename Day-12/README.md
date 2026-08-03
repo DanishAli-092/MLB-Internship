@@ -1,4 +1,4 @@
-# Day 12 — Introduction to Deep Learning & Your First ANN
+# Day 12 — Introduction to Deep Learning & First ANN
 
 **Phase 2 kickoff:** Deep Learning. Today's focus was understanding how
 neural networks are structured, what a perceptron actually does, why
