@@ -1,0 +1,4 @@
+Final Training Accuracy:   0.8924
+Final Validation Accuracy: 0.8877
+Test Accuracy:              0.8789
+Test Loss:                  0.3414
