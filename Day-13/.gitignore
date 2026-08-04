@@ -1,0 +1,4 @@
+#data/
+#outputs/project/fashion_cnn.keras
+__pycache__/
+*.pyc
