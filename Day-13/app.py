@@ -38,8 +38,8 @@ st.markdown(
         box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
     }
     .main-title {
-        font-size: 75px !important;  
-        font-weight: 900 !important;
+        font-size: 65px;  
+        font-weight: 900;
         text-align: center;
         color: #ffffff;
         letter-spacing: 1.5px;
@@ -48,7 +48,7 @@ st.markdown(
     .sub-title {
         text-align: center;
         color: #e0e0e0;
-        font-size: 26px !important;  
+        font-size: 26px;  
         font-weight: 300;
         margin-top: 0px;
     }
@@ -222,23 +222,20 @@ elif page == "📊 Performance Metrics":
             ax.set_xlim(0, 1)
             ax.set_xlabel("Accuracy Rate")
             save_and_show(fig, "per_class_accuracy")
-            
-
 
         st.markdown("---")
         st.subheader("📂 Offline Training Reports")
         st.write("Detailed visual reports generated during the model's main training phase:")
 
-        project_dir = os.path.join("outputs", "project")
+        base_dir = os.path.dirname(os.path.abspath(__file__))
+        project_dir = os.path.join(base_dir, "outputs", "project")
 
-        # 1. Show Training Curves
         curves_path = os.path.join(project_dir, "02_training_curves.png")
         if os.path.exists(curves_path):
             st.image(curves_path, caption="Accuracy & Loss Curves Over Epochs", use_container_width=True)
 
         st.write("")
 
-        # 2. Show Correct vs Incorrect Predictions Vertically
         st.subheader("Model Validation Samples")
 
         correct_path = os.path.join(project_dir, "05_correctly_classified.png")
@@ -252,7 +249,6 @@ elif page == "📊 Performance Metrics":
 
         st.markdown("---")
         
-        # 3.Show Classification Report Text
         report_path = os.path.join(project_dir, "classification_report.txt")
         if os.path.exists(report_path):
             with st.expander("📄 View Raw Classification Report (Precision, Recall, F1-Score)"):
