@@ -170,13 +170,3 @@ streamlit run app.py
 
 ---
 
-## 🔗 Links
-
-- **GitHub Repo:** [add your repo link]
-- **Live Streamlit App:** [add your deployed app link]
-
----
-
-## ⏭️ Next Session
-Training a custom YOLO model on the PPE dataset's actual labels, and
-evaluating performance using precision, recall, and mAP.
