@@ -50,10 +50,10 @@ Day-16/
 │
 ├── streamlit_app/
 │   ├── app.py                      # Streamlit web version of the toolkit
-│   ├── README.md
+│   
 │   └── requirements.txt
-│
-└── README.md                       # This file
+│ 
+└── README.md                       # Read.md file
 ```
 
 ---
