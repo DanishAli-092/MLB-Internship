@@ -88,8 +88,8 @@ The mini-project combines the above into a single, configurable Streamlit pipeli
 
 ```bash
 # 1. Clone the repository
-git clone <your-repo-url>
-cd document_tool
+git clone https://github.com/DanishAli-092/MLB-Internship.git
+cd MLB-Internship/Day-17/document_tool
 
 # 2. Install dependencies
 pip install -r requirements.txt
@@ -97,10 +97,6 @@ pip install -r requirements.txt
 # 3. Run the Streamlit app
 streamlit run app.py
 ```
-
-**Live App:** `<add your Streamlit Cloud / Hugging Face Spaces link here>`
-
----
 
 ## 🧪 Dataset
 
@@ -143,4 +139,3 @@ The comparison grids were generated using `make_challenge_comparison.py`.
 - **Bilateral Filtering** — edge-preserving noise reduction
 
 ---
-
