@@ -1,0 +1,14 @@
+=== Challenge Task: Comparison of Results ===
+
+video1 (data/challenge_video1.mp4): 1662 frames, 30.0 FPS, 1280x720, avg edge density = 0.0162
+video2 (data/challenge_video2.mp4): 1440 frames, 24.0 FPS, 1280x720, avg edge density = 0.0575
+video3 (data/challenge_video3.mp4): 721 frames, 29.97 FPS, 1280x720, avg edge density = 0.0431
+
+--- Comparison ---
+video2 had the HIGHEST average edge density (0.0575), meaning it likely contains more texture, detail, or motion between frames.
+video1 had the LOWEST average edge density (0.0162), suggesting a simpler scene, less motion, or smoother/flatter surfaces.
+
+Resolutions across videos: {'video1': '1280x720', 'video2': '1280x720', 'video3': '1280x720'}
+FPS across videos: {'video1': 30.0, 'video2': 24.0, 'video3': 29.97} (different FPS values affect how smooth the saved output looks).
+
+Note: Edge density is an automated proxy for visual complexity. Watch the actual processed videos in output/challenge/ and add your own qualitative observations below (e.g. lighting conditions, camera shake, background clutter) in the README.

@@ -6,3 +6,9 @@ venv/
 *.log
 *.pkl
 .streamlit/secrets.toml
+
+
+Day-20/output/*.mp4
+Day-20/output/challenge/*.mp4
+**/PPE-DETECTION-14/
+*.pt
