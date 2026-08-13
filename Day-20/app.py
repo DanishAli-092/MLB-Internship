@@ -71,28 +71,38 @@ if uploaded_file is not None:
         cap.release()
         out.release()
 
-        st.success("Processing complete!")
-        st.subheader("Processed Video")
-        st.video(output_path)
+        st.success("Processing complete! Converting video for browser playback... ⏳")
+        
+        #  Convert to web-safe H.264 using FFmpeg
+        web_safe_path = os.path.join(tempfile.gettempdir(), "web_safe_output.mp4")
+        # Run linux command to convert video
+        os.system(f"ffmpeg -y -i {output_path} -vcodec libx264 {web_safe_path}")
 
-        with open(output_path, "rb") as f:
+        st.subheader("Processed Video")
+        st.video(web_safe_path)
+
+        with open(web_safe_path, "rb") as f:
             st.download_button(
                 "Download Processed Video", f, file_name="processed_video.mp4"
             )
 
 st.markdown("---")
 st.subheader("📸 Example Results")
-
 st.write("Sample frames showing original vs processed output:")
+
+
+current_dir = os.path.dirname(os.path.abspath(__file__))
+original_img = os.path.join(current_dir, "examples", "original_sample.jpg")
+processed_img = os.path.join(current_dir, "examples", "processed_sample.jpg")
 
 example_col1, example_col2 = st.columns(2)
 with example_col1:
-    if os.path.exists("examples/original_sample.jpg"):
-        st.image("examples/original_sample.jpg", caption="Original Frame")
+    if os.path.exists(original_img):
+        st.image(original_img, caption="Original Frame")
     else:
-        st.info("Original sample image not found.")
+        st.error(f"Original image missing! Path it checked: {original_img}")
 with example_col2:
-    if os.path.exists("examples/processed_sample.jpg"):
-        st.image("examples/processed_sample.jpg", caption="Processed Frame (Edges)")
+    if os.path.exists(processed_img):
+        st.image(processed_img, caption="Processed Frame (Edges)")
     else:
-        st.info("Processed sample image not found.")
+        st.error(f"Processed image missing! Path it checked: {processed_img}")
