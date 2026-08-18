@@ -1,0 +1,23 @@
+=== RAW IMAGE OCR ===
+SUPERSTORE LAHORE
+Milk 1L
+Rs 250
+Bread
+Rs 120
+Eggs (dozen)
+Rs 380
+TOTAL
+Rs 750
+Thank youl
+
+=== PREPROCESSED IMAGE OCR ===
+SUPERSTORE LAHORE
+Milk 1L
+Rs 250
+Bread
+Rs 120
+Eggs (dozen)
+Rs 380
+TOTAL
+Rs 750
+Thank youl

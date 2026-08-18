@@ -1,0 +1,10 @@
+=== RAW IMAGE OCR ===
+Preprocessing remains
+critical step
+in.achieving high OCR accuracy
+across varied document conditions
+
+=== PREPROCESSED IMAGE OCR ===
+Preprocessing remains a critical:step
+in.achieving high OCR accuracy
+across varied document conditions

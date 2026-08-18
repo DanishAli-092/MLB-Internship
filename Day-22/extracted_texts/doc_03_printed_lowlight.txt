@@ -1,0 +1,11 @@
+=== RAW IMAGE OCR ===
+ARTIFICIAL INTELLIGENCE
+Lecture Notes
+Chapter 5
+Optical Character Recognition
+
+=== PREPROCESSED IMAGE OCR ===
+ARTIFICIAL INTELLIGENCE
+Lecture Notes
+Chapter 5
+Optical Character Recognition

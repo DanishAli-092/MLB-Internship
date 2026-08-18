@@ -1,0 +1,97 @@
+=== RAW IMAGE OCR ===
+Invoice
+no: 88834769
+Date of issue:
+08/18/2011
+Seller:
+Client:
+Kent LLC
+Gonzales PLC
+073 Henry Mountain Apt: 314
+22587 Mia Cape
+Allenbury, AR 83554
+Jeremiahmouth, IN 15364
+Tax Id: 945-74-3857
+Tax Id: 983-77-6600
+IBAN: GBS9LHKM54828280927726
+ITEMS
+No.
+Description
+Qty
+UM
+Net price
+Net worth
+VAT [%]
+Gross
+worth
+1
+Wonder Nation Kids Blue Mout
+2,00
+each
+16,99
+33,98
+10%
+37,38
+Alien
+Slippers House Shoes Size
+SUMMARY
+VAT [%]
+Net worth
+VAT
+Gross worth
+10%
+33,98
+3,40
+37,38
+Total
+$ 33,98
+$ 3,40
+$ 37,38
+
+=== PREPROCESSED IMAGE OCR ===
+Invoice no: 88834769
+Date of issue:
+08/18/2011
+Seller:
+Client:
+Kent LLC
+Gonzales PLC
+073 Henry Mountain Apt: 314
+22587 Mia Cape
+Allenbury, AR 83554
+Jeremiahmouth, IN 15364
+Tax Id: 945-74-3857
+Tax Id: 983-77-6600
+IBAN: GBS9LHKM54828280927726
+ITEMS
+No.
+Description
+Qty
+UM
+Net price
+Net worth
+VAT [%]
+Gross
+worth
+1
+Wonder Nation Kids Blue Mout
+2,00
+each
+16,99
+33,98
+10%
+37,38
+Alien Slippers House Shoes Size
+SUMMARY
+VAT [%]
+Net worth
+VAT
+Gross worth
+10%
+33,98
+3,40
+37,38
+Total
+$ 33,98
+$ 3,40
+$ 37,38

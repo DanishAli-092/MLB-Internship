@@ -1,0 +1,11 @@
+=== RAW IMAGE OCR ===
+To Whom It May Concern,
+This letter confirms enrollment
+in the Computer Science program
+at University of Central Punjab_
+
+=== PREPROCESSED IMAGE OCR ===
+To Whom It May Concern,
+This letter confirms enrollment
+in the Computer Science program
+at University of Central Punjab_

@@ -1,0 +1,18 @@
+OCR Comparison Summary - Raw vs Preprocessed
+==================================================
+
+book_01_page.png                    | raw: 0.934 | preprocessed: 0.935 | diff: +0.001
+book_02_page.jpg                    | raw: 0.814 | preprocessed: 0.782 | diff: -0.031
+book_03_page_scanned.png            | raw: 0.778 | preprocessed: 0.727 | diff: -0.051
+doc_01_printed_report.png           | raw: 0.956 | preprocessed: 0.862 | diff: -0.094
+doc_02_printed_letter.png           | raw: 0.872 | preprocessed: 0.853 | diff: -0.019
+doc_03_printed_lowlight.png         | raw: 0.947 | preprocessed: 0.932 | diff: -0.015
+handwritten_01_note.jpg             | raw: 0.944 | preprocessed: 0.856 | diff: -0.088
+handwritten_02_note.png             | raw: 0.982 | preprocessed: 0.974 | diff: -0.008
+handwritten_03_note.png             | raw: 0.743 | preprocessed: 0.820 | diff: +0.077
+receipt_01.jpg                      | raw: 0.907 | preprocessed: 0.906 | diff: -0.001
+receipt_02_invoice.png              | raw: 0.653 | preprocessed: 0.707 | diff: +0.053
+receipt_03_faded.png                | raw: 0.642 | preprocessed: 0.687 | diff: +0.045
+signboard_01_warning.jpg            | raw: 0.924 | preprocessed: 0.986 | diff: +0.062
+signboard_02_direction.png          | raw: 0.793 | preprocessed: 0.980 | diff: +0.187
+signboard_03_warning.png            | raw: 0.998 | preprocessed: 1.000 | diff: +0.001

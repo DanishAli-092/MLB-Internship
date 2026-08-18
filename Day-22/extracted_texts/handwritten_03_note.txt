@@ -1,0 +1,9 @@
+=== RAW IMAGE OCR ===
+milk, eggs;
+bread, coffee
+Buy:
+
+=== PREPROCESSED IMAGE OCR ===
+milk; eggs;
+bread, coffee
+Buy:

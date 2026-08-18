@@ -1,0 +1,15 @@
+=== RAW IMAGE OCR ===
+CAFE ReceiPT
+Coftfee
+Rs 350
+Sandwich Rs 450
+Total
+Rs 800
+
+=== PREPROCESSED IMAGE OCR ===
+CAFE Receipt
+Coftee
+Re 350
+Sandwich Re 450
+Total
+Re 800

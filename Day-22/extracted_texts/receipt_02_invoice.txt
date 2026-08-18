@@ -1,0 +1,15 @@
+=== RAW IMAGE OCR ===
+INVOICE #4521
+TrueFlare Al Services
+n8n Automation Setup
+Amount Due: $150.00
+Due Date:
+30:08-2026
+
+=== PREPROCESSED IMAGE OCR ===
+INVOICE #4521
+TrueFlare Al Services
+n8n Automation Setup
+Amount Due: $150.00
+Due Date:
+30-08-2026

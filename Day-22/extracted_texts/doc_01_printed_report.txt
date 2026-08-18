@@ -1,0 +1,15 @@
+=== RAW IMAGE OCR ===
+QUARTERLY PROGRESS REPORT
+Student: Danish Ali
+Program: MLB Summer Internship
+Day 22
+Introduction to OCR
+Status: In Progress
+
+=== PREPROCESSED IMAGE OCR ===
+QUARTERLY PROGRESS REPORT
+Student: Danish Ali
+Program: MLB Summer Internship
+Day 22
+Introduction to OCR
+Status: In Progress

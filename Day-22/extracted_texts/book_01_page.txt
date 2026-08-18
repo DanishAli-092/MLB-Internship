@@ -1,0 +1,13 @@
+=== RAW IMAGE OCR ===
+Chapter 3: Computer Vision
+Computer vision enables machines to
+interpret and understand visual data
+from the world, forming the basis
+of modern OCR systems_
+
+=== PREPROCESSED IMAGE OCR ===
+Chapter 3: Computer Vision
+Computer vision enables machines to
+interpret and understand visual data
+from the world, forming the basis
+of modern OCR systems_
