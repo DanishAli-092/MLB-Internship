@@ -1,4 +1,3 @@
-import easyocr
 import cv2
 import streamlit as st
 
@@ -6,6 +5,7 @@ import streamlit as st
 # load EasyOCR once per session
 @st.cache_resource
 def load_easyocr_reader():
+    import easyocr
     reader = easyocr.Reader(["en"], gpu=False)
     return reader
 
