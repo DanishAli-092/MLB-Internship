@@ -1,3 +1,4 @@
+import easyocr
 import cv2
 import streamlit as st
 
@@ -5,7 +6,6 @@ import streamlit as st
 # load EasyOCR once per session
 @st.cache_resource
 def load_easyocr_reader():
-    import easyocr
     reader = easyocr.Reader(["en"], gpu=False)
     return reader
 
@@ -13,19 +13,18 @@ def load_easyocr_reader():
 # load PaddleOCR once per session
 # extra pipeline models disabled (not needed, preprocess already
 # straightens the image); mkldnn off to avoid a CPU inference bug
-# load PaddleOCR once per session
 @st.cache_resource
 def load_paddleocr_reader():
     import logging
     logging.getLogger("ppocr").setLevel(logging.ERROR)
 
     from paddleocr import PaddleOCR
-    # V3 for RAM safety + MKLDNN off to prevent C++ backend crash
     reader = PaddleOCR(
-        lang="en",
-        use_angle_cls=False,
-        ocr_version='PP-OCRv3',
-        enable_mkldnn=False
+        use_doc_orientation_classify=False,
+        use_doc_unwarping=False,
+        use_textline_orientation=False,
+        enable_mkldnn=False,
+        lang="en"
     )
     return reader
 
