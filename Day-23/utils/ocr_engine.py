@@ -20,13 +20,11 @@ def load_paddleocr_reader():
     logging.getLogger("ppocr").setLevel(logging.ERROR)
 
     from paddleocr import PaddleOCR
-    # Ultra-lightweight and stripped-down settings
+    # Bare-minimum settings + V3 for RAM safety
     reader = PaddleOCR(
         lang="en",
-        use_angle_cls=False,            
-        show_log=False,          
-        cpu_threads=1,                  
-        ocr_version='PP-OCRv3'          
+        use_angle_cls=False,
+        ocr_version='PP-OCRv3'
     )
     return reader
 
