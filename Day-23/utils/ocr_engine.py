@@ -13,18 +13,25 @@ def load_easyocr_reader():
 # load PaddleOCR once per session
 # extra pipeline models disabled (not needed, preprocess already
 # straightens the image); mkldnn off to avoid a CPU inference bug
+# load PaddleOCR once per session
 @st.cache_resource
 def load_paddleocr_reader():
     import logging
     logging.getLogger("ppocr").setLevel(logging.ERROR)
 
     from paddleocr import PaddleOCR
+    # Ultra-lightweight settings for Streamlit 1GB RAM limit
     reader = PaddleOCR(
+        lang="en",
+        use_angle_cls=False,            # Skip angle classifier to save memory
+        show_log=False,
+        use_gpu=False,
+        enable_mkldnn=False,            
+        cpu_threads=1,                  # FORCE single thread to stop RAM spikes
+        ocr_version='PP-OCRv3',         # Use V3 instead of heavy V4
         use_doc_orientation_classify=False,
         use_doc_unwarping=False,
-        use_textline_orientation=False,
-        enable_mkldnn=False,
-        lang="en"
+        use_textline_orientation=False
     )
     return reader
 
