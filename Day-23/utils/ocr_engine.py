@@ -13,6 +13,12 @@ def load_easyocr_reader():
 # load PaddleOCR once per session
 # extra pipeline models disabled (not needed, preprocess already
 # straightens the image); mkldnn off to avoid a CPU inference bug
+# load PaddleOCR once per session
+# extra pipeline models disabled (not needed, preprocess already
+# straightens the image); mkldnn off to avoid a CPU inference bug
+# mobile detection+recognition models forced explicitly - the default
+# detection model was pulling the GPU-optimized "server" variant,
+# which is far too heavy for Streamlit Cloud's 1GB CPU-only free tier
 @st.cache_resource
 def load_paddleocr_reader():
     import logging
@@ -20,6 +26,8 @@ def load_paddleocr_reader():
 
     from paddleocr import PaddleOCR
     reader = PaddleOCR(
+        text_detection_model_name="PP-OCRv5_mobile_det",
+        text_recognition_model_name="PP-OCRv5_mobile_rec",
         use_doc_orientation_classify=False,
         use_doc_unwarping=False,
         use_textline_orientation=False,
