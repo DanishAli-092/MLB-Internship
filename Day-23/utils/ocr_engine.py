@@ -20,11 +20,12 @@ def load_paddleocr_reader():
     logging.getLogger("ppocr").setLevel(logging.ERROR)
 
     from paddleocr import PaddleOCR
-    # Bare-minimum settings + V3 for RAM safety
+    # V3 for RAM safety + MKLDNN off to prevent C++ backend crash
     reader = PaddleOCR(
         lang="en",
         use_angle_cls=False,
-        ocr_version='PP-OCRv3'
+        ocr_version='PP-OCRv3',
+        enable_mkldnn=False
     )
     return reader
 
