@@ -20,15 +20,13 @@ def load_paddleocr_reader():
     logging.getLogger("ppocr").setLevel(logging.ERROR)
 
     from paddleocr import PaddleOCR
-    # Ultra-lightweight settings for Streamlit 1GB RAM limit
+    # Ultra-lightweight and stripped-down settings
     reader = PaddleOCR(
         lang="en",
-        use_angle_cls=False,            # Skip angle classifier to save memory
-        show_log=False,
-        use_gpu=False,
-        enable_mkldnn=False,            
-        cpu_threads=1,                  # FORCE single thread to stop RAM spikes
-        ocr_version='PP-OCRv3'          # Use V3 instead of heavy V4
+        use_angle_cls=False,            
+        show_log=False,          
+        cpu_threads=1,                  
+        ocr_version='PP-OCRv3'          
     )
     return reader
 
