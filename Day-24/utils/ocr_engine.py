@@ -130,17 +130,19 @@ def load_tesseract_engine():
     import pytesseract
     import sys
     
+
     if sys.platform.startswith('win'):
-        
+
         pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
+    else:
+        
+        pytesseract.pytesseract.tesseract_cmd = '/usr/bin/tesseract'
         
     try:
         pytesseract.get_tesseract_version()
     except Exception as e:
         raise RuntimeError(
-            "Tesseract binary not found. On Streamlit Cloud, add "
-            "'tesseract-ocr' to packages.txt. Locally on Windows, install "
-            "Tesseract and configure pytesseract_cmd."
+            "Tesseract binary not found! Make sure 'tesseract-ocr' is in packages.txt."
         ) from e
     return True
 
