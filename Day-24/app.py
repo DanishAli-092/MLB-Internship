@@ -9,6 +9,17 @@ from utils.preprocessing import preprocess_pipeline
 from utils.ocr_engine import extract_text, warm_up_engine
 
 
+# Streamlit Cloud's 1GB free tier does not have room for more than one
+# heavy OCR model in memory at once. @st.cache_resource keeps every model
+# loaded forever once called - so if a user (or tester) switches between
+# EasyOCR / PaddleOCR / RapidOCR / DocTR during a session
+def ensure_only_selected_engine_loaded(selected_engine):
+    previous_engine = st.session_state.get("loaded_engine")
+    if previous_engine != selected_engine:
+        st.cache_resource.clear()
+        st.session_state["loaded_engine"] = selected_engine
+
+
 # streamlit uploader gives a PIL imag but OpenCV needs a BGR numpy array
 def pil_to_cv2(pil_image):
     rgb_array = np.array(pil_image.convert("RGB"))
@@ -174,8 +185,10 @@ def main():
 
     # warm up the selected engine's model ONCE on the main thread before any
     # worker threads start - avoids multiple threads racing to load the same
-    # @st.cache_resource model simultaneously when several files are uploaded
+    # @st.cache_resource model simultaneously when several files are uploaded.
+    
     with st.spinner(f"Loading {ocr_engine}..."):
+        ensure_only_selected_engine_loaded(ocr_engine)
         warm_up_engine(ocr_engine)
 
     
