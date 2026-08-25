@@ -1,0 +1,5 @@
+# Ignore YOLO pre-trained model weights
+*.pt
+
+# Ignore Python cache 
+__pycache__/
