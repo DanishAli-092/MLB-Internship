@@ -19,9 +19,12 @@ st.title("🦺 Custom PPE Detection System")
 st.write("Upload an image or video and the model will detect PPE items with confidence scores.")
 
 
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+MODEL_PATH = os.path.join(BASE_DIR, "models", "best.pt")
+
 @st.cache_resource
 def load_model():
-    return YOLO("models/best.pt")
+    return YOLO(MODEL_PATH)
 
 model = load_model()
 
