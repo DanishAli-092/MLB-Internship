@@ -114,7 +114,7 @@ tracker_file = "bytetrack.yaml" if tracker_choice == "ByteTrack" else "botsort_r
 
 confidence = st.sidebar.slider("Confidence threshold", 0.1, 0.9, 0.6, 0.05)
 
-SAMPLE_VIDEOS_DIR = "sample_videos"
+SAMPLE_VIDEOS_DIR = str(Path(__file__).parent / "sample_videos")
 
 video_source = st.radio(
     "Video Source", ["Upload Your Own Video", "Use Sample Video"], horizontal=True
