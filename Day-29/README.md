@@ -2,7 +2,7 @@
 
 **MLB Summer Internship | Danish Ali**
 
-Streamlit App URL: link here
+**Streamlit App URL:** [View Live Application Here](https://mlb-internship-danish-ali-day-29-object-tracking.streamlit.app/)
 
 ## What is Object Tracking?
 
