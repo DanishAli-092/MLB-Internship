@@ -11,4 +11,6 @@ venv/
 Day-20/output/*.mp4
 Day-20/output/challenge/*.mp4
 **/PPE-DETECTION-14/
-*.pt
+Day-20/*.pt
+Day-29/botsort_reid.yaml
+Day-29/bytetrack_tuned.yaml

@@ -288,7 +288,7 @@ if temp_input_path is not None:
 
     if st.button("Run Tracking", type="primary"):
         with st.spinner("Loading model..."):
-            model = load_model(model_choice)
+            model = load_model(str(Path(__file__).parent / model_choice))
             resolved_tracker = ensure_tracker_config(tracker_file)
 
         output_path, unique_ids, best_seen, elapsed = process_video(
