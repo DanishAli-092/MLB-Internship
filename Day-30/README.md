@@ -2,7 +2,7 @@
 
 **MLB Summer Internship | Danish Ali**
 
-**Streamlit App URL:** [View Live Application Here](https://mlb-internship-danish-ali-day-29-object-tracking.streamlit.app/)
+**Streamlit App URL:** [View Live Application Here](https://mlb-internship-danish-ali-day-30-vehicle-counting.streamlit.app/)
 
 A computer vision application that detects, tracks, and counts vehicles (cars, buses,
 trucks, motorcycles) crossing a defined line in traffic videos, using YOLO for
@@ -99,6 +99,8 @@ Day-30/
 
 ```bash
 # run on a single video from the command line
+python vehicle_counting.py --input sample_input_videos/test_traffic-4.mp4 --model yolov8s.pt
+
 python vehicle_counting.py --input sample_input_videos/traffic1.mp4 --output output_videos/result1.mp4
 
 # run the streamlit app
