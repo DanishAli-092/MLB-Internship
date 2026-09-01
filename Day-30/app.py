@@ -1,6 +1,8 @@
 import os
 import time
 import tempfile
+from pathlib import Path
+
 import cv2
 import streamlit as st
 from ultralytics import YOLO
@@ -110,7 +112,7 @@ def main():
     )
 
     # folder where the bundled sample traffic videos live
-    SAMPLE_DIR = "sample_input_videos"
+    SAMPLE_VIDEOS_DIR = str(Path(__file__).parent / "sample_videos")
 
     # maps the dropdown label shown to the user to the actual tracker config file
     TRACKER_OPTIONS = {
@@ -140,9 +142,9 @@ def main():
             tfile.write(uploaded_file.read())
             input_path = tfile.name
     else:
-        if os.path.isdir(SAMPLE_DIR):
+        if os.path.isdir(SAMPLE_VIDEOS_DIR):
             sample_files = sorted(
-                f for f in os.listdir(SAMPLE_DIR)
+                f for f in os.listdir(SAMPLE_VIDEOS_DIR)
                 if f.lower().endswith((".mp4", ".avi", ".mov", ".mkv"))
             )
         else:
@@ -150,9 +152,9 @@ def main():
 
         if sample_files:
             selected_sample = st.selectbox("Choose a sample video", sample_files)
-            input_path = os.path.join(SAMPLE_DIR, selected_sample)
+            input_path = os.path.join(SAMPLE_VIDEOS_DIR, selected_sample)
         else:
-            st.warning(f"No sample videos found in '{SAMPLE_DIR}/'. Add some or switch to uploading your own.")
+            st.warning(f"No sample videos found in '{SAMPLE_VIDEOS_DIR}/'. Add some or switch to uploading your own.")
 
     if input_path is not None:
         st.video(input_path)
