@@ -112,7 +112,7 @@ def main():
     )
 
     # folder where the bundled sample traffic videos live
-    SAMPLE_VIDEOS_DIR = str(Path(__file__).parent / "sample_videos")
+    SAMPLE_VIDEOS_DIR = str(Path(__file__).parent / "sample_input_videos")
 
     # maps the dropdown label shown to the user to the actual tracker config file
     TRACKER_OPTIONS = {
