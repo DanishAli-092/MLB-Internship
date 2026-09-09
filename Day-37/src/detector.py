@@ -6,7 +6,7 @@ Wraps the model so rest of app only deals with clean boxes ids and confidences.
 
 from ultralytics import YOLO
 import numpy as np
-
+import os
 
 # wraps yolo model to detect and track only person class
 class PersonDetector:
@@ -22,15 +22,19 @@ class PersonDetector:
 
     # runs detection and tracking on single frame for person class only
     # uses botsort instead of bytetrack since it also matches people using
-    # appearance features not just motion so ids stay stable when people overlap
-    def track(self, frame: np.ndarray, tracker: str = "src/botsort_reid.yaml"):
+    def track(self, frame: np.ndarray, tracker: str = None):
+        
+        if tracker is None:
+            current_dir = os.path.dirname(os.path.abspath(__file__))
+            tracker = os.path.join(current_dir, "botsort_reid.yaml")
+            
         results = self.model.track(
-        frame,
-        classes=[self.PERSON_CLASS_ID],
-        conf=self.confidence,
-        tracker=tracker,
-        persist=True,
-        verbose=False,
+            frame,
+            classes=[self.PERSON_CLASS_ID],
+            conf=self.confidence,
+            tracker=tracker,
+            persist=True,
+            verbose=False,
         )
         return results[0]
 
