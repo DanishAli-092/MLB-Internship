@@ -126,4 +126,4 @@ Sourced from Pexels/Pixabay (free stock footage) and personal recordings.
 
 ## 🚀 Deployment
 
-Deployed on **Streamlit Community Cloud**. Live app link: _[add your deployed URL here]_
+Deployed on **Streamlit Community Cloud**. Live app link: [Click here to view the Smart People Counting App](https://mlb-internship-danish-day-37-people-counting-system.streamlit.app/)
