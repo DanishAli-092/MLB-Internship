@@ -89,4 +89,4 @@ was the least reliable unless the image had already-uniform lighting.
 
 ## 🚀 Deployment
 
-Deployed on **Streamlit Community Cloud**. Live app link: [Click here to view Intelligent Security Monitoring System and Image Segmenation](https://mlb-internship-danish-day-37-people-counting-system.streamlit.app/)
+Deployed on **Streamlit Community Cloud**. Live app link: [Click here to view Intelligent Security Monitoring System and Image Segmenation](https://mlb-internship-dani-day-38-security-monitor-img-segmentation.streamlit.app/)
