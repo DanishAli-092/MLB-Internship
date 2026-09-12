@@ -1,0 +1,17 @@
+# botsort_reid.yaml
+
+
+tracker_type: botsort
+track_high_thresh: 0.5
+track_low_thresh: 0.1
+new_track_thresh: 0.6
+track_buffer: 90
+match_thresh: 0.65   # lowered from 0.8 for easier match right after occlusion
+fuse_score: True
+
+# BoT-SORT specific
+gmc_method: sparseOptFlow
+proximity_thresh: 0.5
+appearance_thresh: 0.5    # loosened since far crops give weak appearance signal
+with_reid: True
+model: auto          # lets Ultralytics pick a default lightweight ReID model

@@ -1,0 +1,10 @@
+# byte_track.yaml
+
+
+tracker_type: bytetrack
+track_high_thresh: 0.5    # detections above this used for first association pass
+track_low_thresh: 0.1     # detections above this but below high used for second pass
+new_track_thresh: 0.6     # detection must be at least this confident to start new track
+track_buffer: 90          # frames to keep a lost track alive 
+match_thresh: 0.65        # lowered from 0.8 for easier re match right after occlusion
+fuse_score: True
