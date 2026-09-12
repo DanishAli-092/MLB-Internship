@@ -18,6 +18,9 @@ from modules.event_logger import EventLogger
 from modules.segmentation import apply_segmentation
 from utils.helpers import pil_to_cv2, cv2_to_pil, draw_detections
 
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
 st.set_page_config(
     page_title="Intelligent Security Monitoring System",
     page_icon="🛡️",
@@ -137,7 +140,8 @@ st.markdown("""
 @st.cache_resource(show_spinner="Loading YOLO model (first run only)...")
 def load_detector(confidence_value, iou_value, infer_width_value, tracker_value):
     try:
-        return PersonDetector(confidence=confidence_value, iou=iou_value,
+        model_path = os.path.join(BASE_DIR, "yolov8n.pt")
+        return PersonDetector(model_path=model_path, confidence=confidence_value, iou=iou_value,
                                infer_width=infer_width_value, tracker_config=tracker_value)
     except Exception as e:
         st.error(f"Could not load the YOLO model: {e}")
@@ -197,8 +201,8 @@ with st.sidebar:
              "another) — at the cost of extra processing time."
     )
     TRACKER_MAP = {
-        "ByteTrack (fast)": "byte_track.yaml",
-        "BoT-SORT + ReID (more consistent, slower)": "botsort_reid.yaml",
+        "ByteTrack (fast)": os.path.join(BASE_DIR, "byte_track.yaml"),
+        "BoT-SORT + ReID (more consistent, slower)": os.path.join(BASE_DIR, "botsort_reid.yaml"),
     }
     tracker_config = TRACKER_MAP[tracker_choice_label]
 
@@ -623,6 +627,6 @@ with tab_segment:
 st.markdown("""
     <div class="app-footer">
         🛡️ Intelligent Security Monitoring System · Day 39 · ML Bench AI/ML Internship<br>
-        Built by Danish Ali — YOLOv8 + ByteTrack/BoT-SORT
+        Built by Danish Ali (Prince) — YOLOv8 + ByteTrack/BoT-SORT
     </div>
 """, unsafe_allow_html=True)
