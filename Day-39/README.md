@@ -20,7 +20,7 @@ This is an optimization pass on the original project: faster, more configurable,
 
 ## 🖥️ Deployment
 
-- **Live app:** Deployed on **Streamlit Community Cloud**. Live app link: [Click here to view Intelligent Security Monitoring System and Image Segmenation](https://mlb-internship-dani-day-38-security-monitor-img-segmentation.streamlit.app/)
+- **Live app:** Deployed on **Streamlit Community Cloud**. Live app link: [Click here to view improved Intelligent Security Monitoring System and Image Segmenation](https://mlb-internship-dani-day-39-security-monitor-img-segmentation.streamlit.app/)
 
 ## 📁 Project Structure
 
