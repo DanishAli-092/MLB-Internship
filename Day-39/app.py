@@ -627,6 +627,6 @@ with tab_segment:
 st.markdown("""
     <div class="app-footer">
         🛡️ Intelligent Security Monitoring System · Day 39 · ML Bench AI/ML Internship<br>
-        Built by Danish Ali (Prince) — YOLOv8 + ByteTrack/BoT-SORT
+        Built by Danish Ali — YOLOv8 + ByteTrack/BoT-SORT
     </div>
 """, unsafe_allow_html=True)
