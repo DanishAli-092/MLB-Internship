@@ -128,6 +128,7 @@ if uploaded_video is not None:
 
     cap = cv2.VideoCapture(video_path)
     ret, first_frame = cap.read()
+    video_fps = cap.get(cv2.CAP_PROP_FPS)
     cap.release()
 
     if not ret:
@@ -135,6 +136,12 @@ if uploaded_video is not None:
         st.stop()
 
     frame_h, frame_w = first_frame.shape[:2]
+
+    st.subheader("Video Information")
+    info_col1, info_col2, info_col3 = st.columns(3)
+    info_col1.metric("Width", f"{frame_w}px")
+    info_col2.metric("Height", f"{frame_h}px")
+    info_col3.metric("Video FPS", f"{video_fps:.1f}")
 
     display_scale, display_w, display_h = compute_display_scale(frame_w, frame_h)
     display_frame = cv2.resize(first_frame, (display_w, display_h))
