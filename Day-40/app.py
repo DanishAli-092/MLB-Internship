@@ -53,9 +53,12 @@ st.markdown(
 MAX_DISPLAY_WIDTH = 700
 MAX_DISPLAY_HEIGHT = 600
 
+# Streamlit Cloud ke liye Absolute Path (Rasta) nikalne ka tareeqa
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
 TRACKER_CONFIGS = {
-    "ByteTrack (faster, motion-based)": "config/bytetrack_custom.yaml",
-    "BoT-SORT (slower, appearance-aware)": "config/botsort_custom.yaml",
+    "ByteTrack (faster, motion-based)": os.path.join(BASE_DIR, "config", "bytetrack_custom.yaml"),
+    "BoT-SORT (slower, appearance-aware)": os.path.join(BASE_DIR, "config", "botsort_custom.yaml"),
 }
 
 # sidebar settings
