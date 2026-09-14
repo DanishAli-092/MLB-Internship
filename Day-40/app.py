@@ -53,7 +53,7 @@ st.markdown(
 MAX_DISPLAY_WIDTH = 700
 MAX_DISPLAY_HEIGHT = 600
 
-# Streamlit Cloud ke liye Absolute Path (Rasta) nikalne ka tareeqa
+# resolve absolute path for compatibility with Streamlit Cloud
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 TRACKER_CONFIGS = {
