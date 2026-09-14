@@ -176,14 +176,15 @@ Occasionally, tracking IDs switch when two objects cross paths or briefly occlud
 
 ## 🚀 Deployment
 
-- **GitHub Repository:** _add link_
-- **Live App URL (Streamlit Cloud / Hugging Face Spaces):** _add link_
-- **Demo Recording (3–5 min):** _add link_
+- **Live App URL (Streamlit Cloud):** [Streamlit App link Day-40 Real Time Video Analytics ](https://mlb-internship-danish-day-40-real-time-video-analytics.streamlit.app/)
+
+- **Demo Recording (3–5 min):** [Watch Demo Here](https://drive.google.com/file/d/1i2x73xgJw6nwyT6SU7VAegBJ1ObJ1Hat/view?usp=drive_link)
 
 ---
 
 ## 👤 Author
 
-**Danish Ali (Prince)**
-BS Computer Science — AI/ML & Computer Vision
-MLB Summer Internship — Day 40
+**Danish Ali**
+
+BS Computer Science Final Year Student — AI/ML & Computer Vision
+ML Bench Summer Internship — Day 40
