@@ -1,4 +1,5 @@
 import time
+from datetime import datetime
 import numpy as np
 
 
@@ -53,14 +54,14 @@ class EntryExitTracker:
                 "track_id": track_id,
                 "event": "entry",
                 "frame": frame_number,
-                "timestamp": time.time(),
+                "timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
             })
         elif not is_inside and was_inside:
             self.events.append({
                 "track_id": track_id,
                 "event": "exit",
                 "frame": frame_number,
-                "timestamp": time.time(),
+                "timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
             })
 
         self.inside_state[track_id] = is_inside
